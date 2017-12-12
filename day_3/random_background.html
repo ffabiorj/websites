@@ -4,45 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Random Background!</title>
+    <title>Random Background</title>
     <script type="text/javascript" src="script.js"></script>
     <style>
+        :focus {
+            outline: 0;
+        }
         body {
-            width: auto;
+            background: salmon;
         }
-        .square {
-            width: 50%;
-            height: 310px;
-            float: left;
-        }
-        #one {
-            background: red;
-        }
-        #two {
-            background: green;
-        }
-        #three {
-            background: yellowgreen;
-        }
-        #four {
-            background: black;
-        }
-        #buttom {
-            position: relative;
-            width: 100px;
+        #button {
+            display: block;
+            width: 200px;
             height: 100px;
-            left: -50px;
-            
-             
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 3px 3px;
+            border-radius: 25px;
+            margin: 250px auto;
         }
     </style>
 </head>
 <body>
-        <button type="submit" id="buttom">CLICK</button>
-        <div class="square" id="one">1</div>
-        <div class="square" id="two">2</div>
-        
-        <div class="square" id="three">3</div>
-        <div class="square" id="four">4</div>
+    <button id="button" onclick="changeColor()">Click here!</button>
 </body>
 </html>
