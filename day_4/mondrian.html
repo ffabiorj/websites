@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mondrian</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <style>
+        body {
+            background: #8e8d8d;
+            font-family: 'Indie Flower', cursive;
+        }
+        h1  {
+            text-align: center;
+        }
+        #container {
+            width: 1000px;
+            height: 600px;
+            margin: 50px auto;
+            box-shadow: 5px 5px 5px 5px;
+        }
+        .row {
+            width: 1000px;
+            height: 200px;
+            background: white;
+            border-right: 3px solid blue;
+        }
+        .row:nth-child(3) {
+            border-bottom: 3px solid blue;
+            }
+        .column {
+            float: left;
+            width: 250px;
+            height: 200px;
+            
+            border-top: 3px solid blue;
+            border-left: 3px solid blue;
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+        }
+        #colors {
+            background: white;
+            width: 600px;
+            height: 100px;
+            margin: 0 auto;
+            font-size: 0;
+            text-align: center;
+            
+        }
+        .color {
+            display: inline-block;
+            width: 130px;
+            height: 80px;
+            text-align: center;
+            border: 1px solid black;
+            margin: 8px;
+            
+        }
+        #red {
+            background: red;
+        }
+        #yellow {
+            background: yellow;
+        }
+        #green {
+            background: green;
+        }
+        #black {
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pick a color and paint the canvas</h1>
+    <div id="colors">
+        <div class="color" id="red" onclick="takeAColor"></div>
+        <div class="color" id="yellow" onclick="takeAColor"></div>
+        <div class="color" id="green" onclick="takeAColor"></div>
+        <div class="color" id="black" onclick="takeAColor"></div>
+    </div>
+    <div id="container">
+        <div class="row">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>            
+        </div>
+        <div class="row">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>            
+        </div>
+        <div class="row">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>            
+        </div>  
+    </div>
+</body>
+</html>
