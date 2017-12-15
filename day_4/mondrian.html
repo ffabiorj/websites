@@ -7,6 +7,23 @@
     <title>Mondrian</title>
     <script type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </script>
+    <script>
+        $(document).ready(function () {
+            
+            var paint = "white"
+        
+            $(".color").on("click", function () {
+                paint = $(this).css('background-color');
+            })
+        
+            $('.column').on('click', function () {
+        
+                $(this).css("background-color", paint );
+            });
+        });    
+    </script>
     <style>
         body {
             background: #8e8d8d;
@@ -26,6 +43,7 @@
             height: 200px;
             background: white;
             border-right: 3px solid blue;
+            
         }
         .row:nth-child(3) {
             border-bottom: 3px solid blue;
@@ -34,7 +52,7 @@
             float: left;
             width: 250px;
             height: 200px;
-            
+            box-shadow: 3px 3px;
             border-top: 3px solid blue;
             border-left: 3px solid blue;
             -webkit-box-sizing: border-box;
@@ -57,7 +75,6 @@
             text-align: center;
             border: 1px solid black;
             margin: 8px;
-            
         }
         #red {
             background: red;
@@ -71,15 +88,26 @@
         #black {
             background: black;
         }
+        #home {
+            text-align: center;
+            padding-top: 10px;
+            width: 100px;
+            height: 40px;
+            background: #726f6f;
+            margin-left: 1100px;
+        }
+        a:hover {
+            color: red;
+        }
     </style>
 </head>
 <body>
     <h1>Pick a color and paint the canvas</h1>
     <div id="colors">
-        <div class="color" id="red" onclick="takeAColor"></div>
-        <div class="color" id="yellow" onclick="takeAColor"></div>
-        <div class="color" id="green" onclick="takeAColor"></div>
-        <div class="color" id="black" onclick="takeAColor"></div>
+        <div class="color" id="red" onclick="takeAColor()"></div>
+        <div class="color" id="yellow" onclick="takeAColor()"></div>
+        <div class="color" id="green" onclick="takeAColor()"></div>
+        <div class="color" id="black" onclick="takeAColor()"></div>
     </div>
     <div id="container">
         <div class="row">
@@ -100,6 +128,9 @@
             <div class="column"></div>
             <div class="column"></div>            
         </div>  
+    </div>
+    <div id="home">
+        <a href="../home.html">HOME</a>
     </div>
 </body>
 </html>
